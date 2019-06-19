@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="boton.css">
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="#" class="active">Iniciar Sesión</a></li>
+			<li><a href="#">Registrarse</a></li>
+		</ul>
+
+	</div>
+	<div id="formularios">
+		<form action="">
+			<p>Correo electrónico:</p>
+			<div class="field-container">
+				<i class="fa fa-envelope-o fa-lg"></i>
+				<input type="text" class="field" placeholder="user@example.com"> <br/>	
+			</div>
+			
+			<p>Contraseña:</p>
+			<div class="field-container">
+				
+				<i class="fa fa-key fa-lg"></i>
+				<input type="password" class="field" placeholder="*******"> <br/>
+			</div>
+
+			<p class="center-content">
+				<input type="submit" class="btn btn-green" value="Iniciar sesión">
+			</p>
+
+		</form>
+
+		<form action="" id="form-register">
+
+			<div class="columns">
+				
+					<div class="field-container">
+						<p>Nombre:</p>
+						<i class="fa fa-user-circle-o fa-lg"></i>
+						<input type="text" class="field" placeholder="Karina"> <br/>	
+					</div>	
+
+				
+					<div class="field-container">
+						<p>Apellido:</p>		
+						<i class="fa fa-user-circle-o fa-lg"></i>
+						<input type="text" class="field" placeholder="Salm"> <br/>
+					</div>
+			</div>
+			
+			
+			
+
+			<p>Correo electrónico:</p>
+			<div class="field-container">
+				
+				<i class="fa fa-envelope-o fa-lg"></i>
+				<input type="text" class="field" placeholder="user@example.com"> <br/>
+			</div>
+
+			<p>Contraseña:</p>
+			<div class="field-container">
+				
+				<i class="fa fa-key fa-lg"></i>
+				<input type="password" class="field" placeholder="********"> <br/>
+			</div>
+
+			<div class="columns">
+				<div class="field-container">
+					<p>Compañía:</p>	
+					<i class="fa fa-building fa-lg"></i>
+					<input type="text" class="field" placeholder="Microsoft"> <br/>
+				</div>
+
+				
+				<div class="field-container">
+					<p>Teléfono:</p>	
+					<i class="fa fa-phone fa-lg"></i>
+					<input type="text" class="field" placeholder="+52 921234"> <br/>
+				</div>	
+			</div>
+			
+
+			<p class="center-content">
+				<input type="submit" class="btn btn-green" value="Iniciar sesión">
+			</p>
+
+		</form>
+	</div>
+
+	<script src="jquery.js"></script>
+	<script>
+		$(function(){
+			$("#menu li").on("click", function(){
+				var i = $(this).index();
+				$("#formularios form").hide();
+				$("#formularios form").eq(i).show();
+				$("#menu li a").removeClass("active");
+				$(this).find("a").addClass("active");
+			});
+		});
+	</script>
+	
+</body>
+</html>
